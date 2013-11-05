@@ -1,4 +1,4 @@
-class commonpackages::python::yaml {
+class commonpackages::python::argparse {
   case $operatingsystem {
     debian: {
       package { 'python-argparse':
