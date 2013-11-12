@@ -8,10 +8,9 @@ class commonpackages::python::yaml {
     
     centos, redhat: {
       # This requires the epel repo
-      include packagemgrconfig
       package { 'PyYAML':
         ensure  => installed,
-        require => Class["packagemgrconfig"],
+        require => Yumrepo["epel"],
       }
     }
   }

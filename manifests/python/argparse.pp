@@ -8,10 +8,9 @@ class commonpackages::python::argparse {
     
     centos, redhat: {
       # This requires the epel repo
-      include packagemgrconfig
       package { 'python-argparse':
         ensure  => installed,
-        require => Class["packagemgrconfig"],
+        require => Yumrepo["epel"],
       }
     }
   }

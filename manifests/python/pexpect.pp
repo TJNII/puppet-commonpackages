@@ -8,10 +8,9 @@ class commonpackages::python::pexpect {
     
     centos, redhat: {
       # This requires the epel repo
-      include packagemgrconfig
       package { 'pexpect':
         ensure  => installed,
-        require => Class["packagemgrconfig"],
+        require => Yumrepo["epel"],
       }
     }
   }

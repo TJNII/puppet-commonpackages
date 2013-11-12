@@ -8,10 +8,9 @@ class commonpackages::python::pip {
     
     centos, redhat: {
       # This requires the epel repo
-      include packagemgrconfig
       package { 'python-pip':
         ensure  => installed,
-        require => Class["packagemgrconfig"],
+        require => Yumrepo["epel"],
       }
     }
   }
