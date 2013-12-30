@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # 
-class commonpackages::python::pip {
+class commonpackages::dev::xmldev {
   case $operatingsystem {
     debian: {
       package { ['libxml2-dev', 'libxslt1-dev']:
