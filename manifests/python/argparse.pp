@@ -27,5 +27,8 @@ class commonpackages::python::argparse {
         require => Yumrepo["epel"],
       }
     }
+    default: {
+      fail("Unsupported OS: $operatingsystem")
+    }
   }
 }

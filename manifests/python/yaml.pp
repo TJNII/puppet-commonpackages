@@ -27,6 +27,11 @@ class commonpackages::python::yaml {
         require => Yumrepo["epel"],
       }
     }
+
+    default: {
+      fail("Unsupported OS: $operatingsystem")
+    }
+    
   }
 }             
     
