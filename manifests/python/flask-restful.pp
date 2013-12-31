@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # 
-# hypervisor configuration manifest
-# API files
 class commonpackages::python::flask-restful {
   # the API requires flask-restful which is installed by pip which is provided by epel
   include commonpackages::python::pip
